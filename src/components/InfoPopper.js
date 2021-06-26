@@ -83,8 +83,8 @@ const useStyles = makeStyles((theme) => ({
 
 const InfoPopper = () => {
   const DESIGN_URL =
-    "https://www.figma.com/file/lhya7sk5vmf7DYaxrezg80/Clean-Expense-Tracker?node-id=117%3A2";
-  const CODE_URL = "https://github.com/Muzammil98/React-Firebase-auth-template";
+    "https://www.figma.com/file/Qc9vGUMimUKl86Duy4IOFb/Clean-Shoe-Store?node-id=0%3A1";
+  const CODE_URL = "https://github.com/Muzammil98/shoe-store-app";
 
   const [anchorEl, setAnchorEl] = useState(null);
   const [open, setOpen] = useState(false);
