@@ -8,11 +8,14 @@ import Layout from "./components/Layout";
 // * Context
 import { AuthProvider } from "./context/AuthContext";
 
+// * Router
+import Router from './router'
+
 function App() {
   return (
     <AuthProvider>
       <Layout>
-        <AppFrame />
+        <Router/>
       </Layout>
     </AuthProvider>
   );

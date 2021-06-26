@@ -2,19 +2,33 @@ import React from "react";
 import { useAuth } from "../../context/AuthContext";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
+import { IconButton, Button } from "@material-ui/core";
+import { Link } from "react-router-dom";
+import { makeStyles } from "@material-ui/styles";
+const useStyles = makeStyles((theme) => ({
+  root: {},
 
-import { Button, Typography } from "@material-ui/core";
+  homeBtn: {
+    position: "absolute",
+    color: "#fff",
+    fontSize: "15px",
+    fontWeight: "300",
+    left: "20px",
+    top: "10px",
+    textTransform: "capitalize",
+  },
+}));
 const Login = () => {
   const { user, googleSignIn, githubSignIn } = useAuth();
-
+  const classes = useStyles();
   const handleSignIn = (provider) => {
     if (provider === "google") {
       googleSignIn()
-      .then(() => {})
-      .catch((error) => {
-        alert(error.message);
-        console.error(error);
-      });
+        .then(() => {})
+        .catch((error) => {
+          alert(error.message);
+          console.error(error);
+        });
     } else {
       githubSignIn()
         .then(() => {})
@@ -63,6 +77,9 @@ const Login = () => {
         >
           github
         </Button>
+        <Link to="/">
+          <Button className={classes.homeBtn}>Store</Button>
+        </Link>
       </div>
     </div>
   );

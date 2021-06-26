@@ -11,6 +11,26 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    
+  },
+  childContainer: {
+    color: "inherit",
+    // //background: "#302C42",
+    // //boxShadow: "0px 0px 200px #0D0F1D, inset 0px 0px 200px rgba(35, 27, 27, 0.7)",
+    // // borderRadius: "20px",
+    // // display: "flex",
+    // //justifyContent: "center",
+    // // alignItems: "center",
+    // //minWidth: "60vw",
+    // // minHeight: "80vh",
+    // // [theme.breakpoints.down("xs")]: {
+    // //   minWidth: "100vw",
+    // //   minHeight: "100vh",
+    // //   background: "transparent",
+    // //   boxShadow: "none",
+    // // },
+    zIndex: 0,
+    opacity: "0.999",
   },
   fullSvg: {
     width: "100%",
@@ -122,7 +142,7 @@ const Layout = ({ children }) => {
       </svg>
 
       <InfoPopper />
-      {children}
+      <div className={classes.childContainer}>{children}</div>
       <div className={classes.footer}>
         <p>Hand-crafted and made with</p>
         <AiTwotoneHeart className="heart" />

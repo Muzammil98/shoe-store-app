@@ -6,7 +6,7 @@ import {
   githubSignInPopup,
 } from "../utils/firebase";
 import { AuthContext } from "../context/AuthContext";
-import ExpenseTracker from "../containers/ExpenseTracker";
+import ExpenseTracker from "../containers/Home";
 import Login from "../containers/Login";
 
 import { makeStyles } from "@material-ui/core/styles";
